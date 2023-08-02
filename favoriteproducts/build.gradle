@@ -13,11 +13,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_19
+        targetCompatibility JavaVersion.VERSION_19
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '19'
     }
     buildFeatures {
         viewBinding = true
@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation project(":core")
     implementation project(":app")
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.20'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
