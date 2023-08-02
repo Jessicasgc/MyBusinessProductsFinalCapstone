@@ -1,0 +1,10 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ListPreference
+            app:defaultValue="@string/pref_auto"
+            app:entries="@array/mode"
+            app:entryValues="@array/mode_value"
+            app:key="@string/key_mode"
+            app:title="@string/mode"
+            app:useSimpleSummaryProvider="true" />
+</PreferenceScreen>
