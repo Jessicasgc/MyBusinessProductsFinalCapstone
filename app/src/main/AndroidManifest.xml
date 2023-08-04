@@ -4,6 +4,9 @@
     package="com.jessicaamadearahma.mybusinessproducts">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:name=".ProductApp"
@@ -16,6 +19,13 @@
         android:theme="@style/Theme.MyBusinessProducts"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA8ICvIOoBR3ltNQLChQ55PnI7gTjFcWrI" />
+        <receiver android:name=".ui.location.GeofenceBroadcastReceiver"/>
+        <activity
+            android:name=".ui.location.LocationActivity"
+            android:exported="true"/>
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false"

@@ -22,5 +22,11 @@
     <string name="like">Like the product</string>
     <string name="connected">Power Connected</string>
     <string name="disconnected">Power Disconected</string>
-    <string name="mapbox_access_token">pk.eyJ1Ijoic2djMTYiLCJhIjoiY2xrdHNqY3FlMDBvZzNrb3ptejBuZjNwbyJ9.O9pJoOrBhHs4oXOE4IOTHg</string>
+    <string name="content_notif">Anda sudah dekat dengan tempat pengiriman produknya</string>
+    <string name="transition_enter_notif">Anda telah memasuki radius 2km dengan tempat pengiriman produk</string>
+    <string name="transition_dwell_notif">Anda telah di dalam radius 2km dengan tempat pengiriman produk</string>
+    <string name="area_invalid">Area tidak valid</string>
+    <string name="geofencing_success">Geofencing success</string>
+    <string name="geofencing_error">Geofencing Error :</string>
+    <string name="invalid_transition_type">Invalid transition type :</string>
 </resources>

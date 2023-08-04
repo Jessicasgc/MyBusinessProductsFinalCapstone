@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFFFF</color>
-    <color name="pink">#FFA9F9</color>
-    <color name="pinkk">#F18BAD</color>
-    <color name="blue">#02B0E2</color>
-    <color name="bluee">#330FDF</color>
+    <color name="pink">#FF9EAA</color>
+    <color name="pinkk">#FFD0D0</color>
+    <color name="blue">#3AA6B9</color>
+    <color name="bluee">#C1ECE4</color>
 </resources>

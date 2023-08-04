@@ -9,16 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
+import android.widget.Toast
 import com.jessicaamadearahma.mybusinessproducts.R
 import com.jessicaamadearahma.mybusinessproducts.databinding.ActivityMainBinding
 import com.jessicaamadearahma.mybusinessproducts.ui.listproducts.ListProductsFragment
 import com.jessicaamadearahma.mybusinessproducts.ui.listproducts.ListProductsViewModel
+import com.jessicaamadearahma.mybusinessproducts.ui.location.LocationActivity
 import com.jessicaamadearahma.mybusinessproducts.ui.settings.SettingsActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
-    private val listProductsViewModel: ListProductsViewModel by viewModel()
     private lateinit var binding : ActivityMainBinding
     private lateinit var broadcastReceiver: BroadcastReceiver
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
             override fun onReceive(context: Context, intent: Intent) {
                 when (intent.action) {
                     Intent.ACTION_POWER_CONNECTED -> {
-                        Snackbar.make(binding.root, getString(R.string.connected), Snackbar.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity,getString(R.string.connected), Toast.LENGTH_SHORT).show()
                     }
                     Intent.ACTION_POWER_DISCONNECTED -> {
-                        Snackbar.make(binding.root, getString(R.string.disconnected), Snackbar.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity,getString(R.string.disconnected), Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -58,13 +58,16 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.settings, menu)
+        inflater.inflate(R.menu.menu_app, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
+            }
+            R.id.maps -> {
+                startActivity(Intent(this, LocationActivity::class.java))
             }
         }
         return super.onOptionsItemSelected(item)
