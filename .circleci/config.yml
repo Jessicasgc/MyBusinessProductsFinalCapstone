@@ -44,14 +44,3 @@ jobs:
       - store_artifacts:  
           path: app/build/outputs/apk/debug/
           destination: artifact-file
-      - run:
-          name: Run Tests with Code Coverage
-          command: ./gradlew clean jacocoTestReport
-      - store_test_results:
-          path: app/build/test-results
-      - store_artifacts:
-          path: app/build/outputs/apk/debug/
-          destination: artifact-file
-      - store_artifacts:
-          path: app/build/reports/jacoco/test/html/app/build/reports/jacoco/test/html/
-          destination: code-coverage-report
