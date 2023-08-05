@@ -23,7 +23,7 @@ class ProductsRepository(
                     DataMapper.mapEntitiesToDomain(it)
                 }
             }
-            override fun shouldFetch(data: List<Products>?): Boolean = true
+            override fun shouldFetch(data: List<Products>?) = true
             override suspend fun createCall(): Flow<ApiResponse<List<ProductResponse>>> = retrofitRemoteDataSource.getAllProducts()
             override suspend fun saveCallResult(data: List<ProductResponse>) {
                 val productList = DataMapper.mapResponsesToEntities(data)

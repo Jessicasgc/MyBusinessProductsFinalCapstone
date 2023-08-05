@@ -13,10 +13,8 @@ import android.widget.Toast
 import com.jessicaamadearahma.mybusinessproducts.R
 import com.jessicaamadearahma.mybusinessproducts.databinding.ActivityMainBinding
 import com.jessicaamadearahma.mybusinessproducts.ui.listproducts.ListProductsFragment
-import com.jessicaamadearahma.mybusinessproducts.ui.listproducts.ListProductsViewModel
 import com.jessicaamadearahma.mybusinessproducts.ui.location.LocationActivity
 import com.jessicaamadearahma.mybusinessproducts.ui.settings.SettingsActivity
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

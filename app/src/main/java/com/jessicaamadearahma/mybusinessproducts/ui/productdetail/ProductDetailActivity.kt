@@ -1,5 +1,6 @@
 package com.jessicaamadearahma.mybusinessproducts.ui.productdetail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ class ProductDetailActivity : AppCompatActivity() {
 
     private val productDetailViewModel: ProductDetailViewModel by viewModel()
     private lateinit var binding : ActivityProductDetailBinding
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProductDetailBinding.inflate(layoutInflater)

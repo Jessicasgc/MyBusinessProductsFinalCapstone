@@ -1,5 +1,6 @@
 package com.jessicaamadearahma.mybusinessproducts.core.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ class ListProductsAdapter (private var onItemClick: (Products) -> Unit)
     : RecyclerView.Adapter<ListProductsAdapter.ListViewHolder>() {
     private var listProducts = ArrayList<Products>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setProductsData(newListData: List<Products>?){
         if(newListData == null) return
         listProducts.clear()
@@ -23,9 +25,7 @@ class ListProductsAdapter (private var onItemClick: (Products) -> Unit)
     override fun getItemCount() = listProducts.size
     override fun onBindViewHolder(holder: ListProductsAdapter.ListViewHolder, position: Int) {
         val data = listProducts[position]
-        if(data != null){
-            holder.bind(data)
-        }
+        holder.bind(data)
     }
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemProductBinding.bind(itemView)

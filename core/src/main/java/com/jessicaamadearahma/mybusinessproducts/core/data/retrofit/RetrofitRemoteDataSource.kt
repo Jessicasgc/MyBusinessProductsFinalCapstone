@@ -1,7 +1,6 @@
 package com.jessicaamadearahma.mybusinessproducts.core.data.retrofit
 
 import android.util.Log
-import com.jessicaamadearahma.mybusinessproducts.core.data.Resource
 import com.jessicaamadearahma.mybusinessproducts.core.data.retrofit.pojo.ProductResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

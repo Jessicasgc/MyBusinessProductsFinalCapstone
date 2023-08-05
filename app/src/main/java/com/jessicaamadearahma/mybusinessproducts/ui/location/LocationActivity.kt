@@ -33,7 +33,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var geofencingClient: GeofencingClient
     private val locationLat = -7.56828
-    private val LocationLng = 110.81901
+    private val locationLng = 110.81901
     private val geofenceRadius = 2000.0
 
     private val geofencePendingIntent: PendingIntent by lazy {
@@ -55,12 +55,12 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap.uiSettings.isZoomControlsEnabled = true
-        val kirimJandT = LatLng(locationLat, LocationLng)
+        val kirimJandT = LatLng(locationLat, locationLng)
         mMap.addMarker(
             MarkerOptions()
                 .position(kirimJandT)
                 .title("Tempat Pengiriman J&T")
-                .snippet("Disiniii... pada Latitude: $locationLat, Longitude: $LocationLng")
+                .snippet("Disiniii... pada Latitude: $locationLat, Longitude: $locationLng")
         )?.showInfoWindow()
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kirimJandT, 15f))
 
@@ -77,7 +77,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         geofencingClient = LocationServices.getGeofencingClient(this)
         val geofence = Geofence.Builder()
             .setRequestId("")
-            .setCircularRegion(locationLat, LocationLng, geofenceRadius.toFloat())
+            .setCircularRegion(locationLat, locationLng, geofenceRadius.toFloat())
             .setExpirationDuration(Geofence.NEVER_EXPIRE)
             .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_DWELL or Geofence.GEOFENCE_TRANSITION_ENTER)
             .setLoiteringDelay(5000)
